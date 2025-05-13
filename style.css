@@ -1,0 +1,364 @@
+/* Estilo romántico para el sitio de Yecner */
+button:hover {
+  background-color: #ff69b4;
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out, background-color 0.3s;
+}
+
+.galeria {
+  position: relative;
+  overflow: hidden;
+  margin-top: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(255, 182, 193, 0.5);
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+.slide {
+  min-width: 100%;
+  position: relative;
+  text-align: center;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+.frase {
+  position: absolute;
+  bottom: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.7);
+  color: #b22222;
+  padding: 0.5rem 1rem;
+  border-radius: 15px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  animation: aparecer 1s ease-in-out;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #ffc0cb;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: white;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+@media screen and (max-width: 600px) {
+  .frase {
+    font-size: 1rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .prev, .next {
+    font-size: 1.2rem;
+    padding: 0.4rem 0.6rem;
+  }
+}
+
+
+.video-btn {
+  display: block;
+  margin: 1rem auto;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background: #db7093; /* tono rosado elegante */
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(219, 112, 147, 0.3);
+  transition: background 0.3s ease;
+}
+
+.video-btn:hover {
+  background: #c06082;
+}
+
+.video-btn.close {
+  margin-top: 1rem;
+  background: #ff6f91;
+}
+
+.video-btn.close:hover {
+  background: #e85c7f;
+}
+
+
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom right, #fff0f5, #ffe4e1);
+  color: #5c1a1b;
+  overflow-x: hidden;
+}
+
+h1, h2 {
+  text-align: center;
+  color: #c71585;
+}
+
+section {
+  padding: 2rem 1rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+.carta {
+  background: #fffafc;
+  border: 2px dashed #f8a5c2;
+  border-radius: 20px;
+  padding: 1.5rem;
+  animation: pulse 5s infinite;
+  box-shadow: 0 0 10px rgba(255, 105, 180, 0.3);
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+}
+
+.galeria {
+  position: relative;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slider img {
+  min-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #ffb6c1;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: white;
+  border-radius: 50%;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.video video {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.juego {
+  background: #fff5f8;
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: 0 0 10px rgba(255, 182, 193, 0.3);
+}
+
+#trivia p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+#respuestas button {
+  display: block;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  border: none;
+  background: #ffc0cb;
+  color: #800000;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.sorpresa button {
+  display: block;
+  margin: 1rem auto;
+  padding: 1rem 2rem;
+  background: #ff69b4;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+#sorpresa {
+  margin-top: 1rem;
+  text-align: center;
+  background: #ffe6ea;
+  padding: 1rem;
+  border-radius: 15px;
+  animation: aparecer 2s ease-in-out;
+}
+
+@keyframes aparecer {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@media screen and (max-width: 600px) {
+  .prev, .next {
+    font-size: 1.2rem;
+    padding: 0.3rem 0.6rem;
+  }
+
+  h1, h2 {
+    font-size: 1.3rem;
+  }
+
+  /* Ajustes adicionales si es necesario */
+  .carta, .juego, .sorpresa {
+    padding: 1rem;
+  }
+}
+
+.progress-bar-container {
+  height: 5px;
+  background: #ffd1dc;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.progress-bar {
+  height: 100%;
+  background: #ff69b4;
+  width: 0%;
+  transition: width 0.3s ease-in-out;
+}
+
+.story-slide {
+  display: none;
+  position: relative;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.story-slide img {
+  max-width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+}
+
+.caption {
+  margin-top: 0.5rem;
+  font-style: italic;
+  font-size: 1rem;
+}
+
+.heart {
+  pointer-events: none;
+  position: fixed;
+  animation: flotar 5s linear;
+  font-size: 2rem;
+  top: 0;
+}
+
+@keyframes flotar {
+  to {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+/* Animación de revelado */
+.reveal-animation {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Estilo para la sorpresa con fondo y sombra */
+.sorpresa {
+  background: linear-gradient(to top right, #ffb6c1, #ffe4e1); /* Degradado romántico */
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 10px 20px rgba(255, 182, 193, 0.5);
+  position: relative;
+  animation: slideUp 1.5s ease-out, fadeIn 1s ease-in-out; /* Animaciones combinadas */
+}
+
+/* Animación para hacer que el contenido se deslice desde abajo */
+@keyframes slideUp {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Animación para el desvanecimiento */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Efecto cuando se muestra el contenido */
+.reveal-animation {
+  animation: fadeIn 1s ease-in-out, slideUp 1.5s ease-out; 
+}
+
+.reveal-btn {
+  background: #ff69b4;
+  color: white;
+  font-size: 1.2rem;
+  border-radius: 25px;
+  padding: 1rem 2rem;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(219, 112, 147, 0.3);
+  transition: background-color 0.3s ease;
+}
+
+.reveal-btn:hover {
+  background-color: #c06082;
+}
+
+
